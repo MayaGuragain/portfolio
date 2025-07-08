@@ -1,0 +1,115 @@
+---
+layout: layout.njk
+title: Home
+---
+
+<main class="container my-5">
+
+  <!-- Hero Section -->
+  <section class="intro-section py-4">
+  <div class="intro-inner d-flex align-items-center justify-content-center gap-5 flex-wrap">
+    <img src="./images/profile.jpeg"
+         alt="Maya Guragain"
+         class="profile-pic rounded-circle" />
+    
+    <div class="welcome-text text-start" style="max-width:600px; color:#A3BFFA; text-shadow:0 0 6px rgba(163, 191, 250, 0.7);">
+      <h1 class="display-4">Hello, World!</h1>
+      <h1 class="display-4">I’m Maya Guragain.</h1>
+      <p class="lead mt-3">
+        A passionate computer science student and developer dedicated to transforming complex ideas into clean, efficient, and user-friendly software. I enjoy building scalable solutions that solve real-world problems, with a growing focus on artificial intelligence and machine learning.
+      </p>
+      <p id="typewriter" style="font-style: italic; color:#C4D0FF; min-height:1.4rem; text-shadow:0 0 5px rgba(196, 208, 255, 0.8);"></p>
+      <div class="d-flex flex-wrap gap-3 mt-4">
+        <a href="mailto:mayaguragain.mg@gmail.com" class="btn btn-primary">
+          <i class="fas fa-briefcase"></i> Hire Me
+        </a>
+        <a href="https://drive.google.com/uc?export=download&id=1NokqYAypgYJKyxT1vvjapOJcX13m2usP" class="btn btn-primary" target="_blank" rel="noopener noreferrer" download>
+          <i class="fas fa-download"></i> Download Résumé
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="projects-preview-section py-5">
+    <div class="container featured-container">
+      <h2 class="text-center section-heading mb-5">Featured Projects</h2>
+    <div class="project-grid">
+    <div class="project-card" tabindex="0">
+        <img src="/images/PawStay.png" alt="PawStay project screenshot" />
+        <div class="card-body">
+        <h5>PawStay</h5>
+        <a href="https://github.com/MayaGuragain/PawStay" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-sm mt-3">
+            View <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+        </div>
+    </div>
+    <div class="project-card" tabindex="0">
+        <img src="/images/Struq.png" alt="Struq project screenshot" />
+        <div class="card-body">
+        <h5>Struq</h5>
+        <a href="https://github.com/MayaGuragain/Struq" target="_blank" rel="noopener noreferrer" class="btn btn-outline-custom btn-sm mt-3">
+            View <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+        </div>
+    </div>
+    </div>
+      <div class="text-center mt-5">
+        <a href="/projects/" class="btn btn-outline-light btn-lg px-4">
+          Explore More Projects <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect Section -->
+  <section class="connect-section text-center py-5" style="background-color:rgba(0,0,0,0.8); border:1px solid #A3BFFA; color:#C4D0FF; border-radius:12px; box-shadow:0 0 20px rgba(163, 191, 250, 0.3);">
+    <h2 class="mb-4" style="color:#A3BFFA;">Let's Connect</h2>
+    <p class="mb-3">I'm always open to collaborating, learning, or just having a good tech chat. Feel free to reach out!</p>
+    <div class="social-icons d-flex justify-content-center gap-4 mt-3">
+      <a href="https://www.linkedin.com/in/maya-guragain/" target="_blank" title="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" alt="LinkedIn" style="width:40px; height:40px; filter: invert(100%);" />
+      </a>
+      <a href="https://github.com/MayaGuragain" target="_blank" title="GitHub">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width:40px; height:40px; filter: invert(100%);" />
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  const phrases = [
+    "efficient, scalable systems.",
+    "simple solutions to complex problems.",
+    "tools that make life easier.",
+    "clean, maintainable code."
+  ];
+
+  let phraseIndex = 0;
+  let charIndex = 0;
+  const typewriter = document.getElementById("typewriter");
+
+  function type() {
+    if (charIndex <= phrases[phraseIndex].length) {
+      typewriter.textContent = "I enjoy building " + phrases[phraseIndex].slice(0, charIndex) + "|";
+      charIndex++;
+      setTimeout(type, 100);
+    } else {
+      setTimeout(erase, 1800);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      typewriter.textContent = "I enjoy building " + phrases[phraseIndex].slice(0, charIndex - 1) + "|";
+      charIndex--;
+      setTimeout(erase, 50);
+    } else {
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      setTimeout(type, 500);
+    }
+  }
+
+  type();
+</script>

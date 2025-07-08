@@ -1,0 +1,202 @@
+---
+layout: layout.njk
+title: Projects
+---
+
+<main class="projects-container container">
+
+  <div class="row gy-5">
+    <!-- Overview (full‑width) -->
+    <div class="col-12">
+      <section aria-labelledby="overview-title">
+        <h2 id="overview-title">Projects Overview</h2>
+        <p>Over the years I’ve created projects spanning AI, web apps, and systems. Explore them by category or view everything at once.</p>
+      </section>
+    </div>
+
+    <!-- Tabs + Grid -->
+    <div class="col-12">
+      <section>
+        <!-- Tabs -->
+        <nav class="tabs-container mb-4" aria-label="Project categories">
+          <div class="tab active" data-target="all">All</div>
+          <div class="tab" data-target="personal-apps">Personal · Apps</div>
+          <div class="tab" data-target="personal-sys">Personal · Systems</div>
+          <div class="tab" data-target="professional">Professional</div>
+        </nav>
+
+        <!-- ALL PROJECTS -->
+        <div id="all" class="project-category active">
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="/images/PMTron.png" alt="PMtron AI Project Manager Chatbot" />
+              <div class="card-body">
+                <h5>AI Project Manager Chatbot</h5>
+                <p>Teams/Slack wrapper that tracks SOP workflows, detects blockers, estimates timelines, and updates tasks in real‑time.</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="/images/PawStay.png" alt="PawStay web app" />
+              <div class="card-body">
+                <h5>PawStay</h5>
+                <p>Full‑stack ASP.NET MVC boarding platform handling 100+ concurrent reservations with MySQL + Entity Framework.</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="/images/Struq.png" alt="Struq data‑structure playground" />
+              <div class="card-body">
+                <h5>Struq</h5>
+                <p>Django playground that visualises stacks, queues, heaps, and trees for interactive learning.</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="/images/FreqFlier.png" alt="Frequent Flier app" />
+              <div class="card-body">
+                <h5>Frequent Flier</h5>
+                <p>Android suite for flight management. Optimised SQL and intuitive booking flows.</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="/images/Zaku.png" alt="Zaku" />
+              <div class="card-body">
+                <h5>ZAKU Task Manager</h5>
+                <p>Unix‑style task manager in C emphasizing I/O and memory‑safe process control.</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="/images/ReliableTransfer.png" alt="Reliable Transfer app" />
+              <div class="card-body">
+                <h5>Reliable Transfer</h5>
+                <p>Python protocol mirroring TCP (ACKs, loss recovery) proven under failure simulations.</p>
+              </div>
+            </div>
+            <div class="project-card">
+                <img src="/images/FloatingPoint.png" alt="Floating Point app" />
+                <div class="card-body">
+                <h5>Floating‑Point Library</h5>
+                <p>Pure‑C IEEE‑754 arithmetic using bitwise ops, handling overflow, rounding, and special values.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSONAL · APPS -->
+        <div id="personal-apps" class="project-category">
+          <h3>Personal · Apps</h3>
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="/images/FreqFlier.png" alt="Frequent Flier app" />
+              <div class="card-body">
+                <h5>Frequent Flier</h5>
+                <p>Android suite for flight management. Optimised SQL and intuitive booking flows.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERSONAL · SYSTEMS -->
+        <div id="personal-sys" class="project-category">
+          <h3>Personal · Systems</h3>
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="/images/Zaku.png" alt="Zaku app" />
+              <div class="card-body">
+                <h5>ZAKU Task Manager</h5>
+                <p>Unix-style task manager in C for memory-safe process control.</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="/images/ReliableTransfer.png" alt="Reliable Transfer app" />
+              <div class="card-body">
+                <h5>Reliable Transfer</h5>
+                <p>TCP-like protocol in Python with ACKs and recovery mechanisms.</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="/images/FloatingPoint.png" alt="Floating Point app" />
+              <div class="card-body">
+                <h5>Floating-Point Library</h5>
+                <p>IEEE-754 arithmetic in pure C using bitwise operations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROFESSIONAL -->
+        <div id="professional" class="project-category">
+          <h3>Professional</h3>
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="/images/PMTron.png" alt="PMtron AI Project Manager Chatbot" />
+              <div class="card-body">
+                <h5>AI Project Manager Chatbot</h5>
+                <p>Tracks SOPs, detects blockers, estimates timelines, and updates tasks in real‑time.</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="/images/PawStay.png" alt="PawStay web app" />
+              <div class="card-body">
+                <h5>PawStay</h5>
+                <p>Full‑stack ASP.NET MVC boarding platform handling 100+ concurrent reservations with MySQL + Entity Framework.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<script>
+  (() => {
+    const loadingBar = document.getElementById('loading-bar');
+
+    function showLoading() {
+      loadingBar.style.width = '0%';
+      loadingBar.style.opacity = '1';
+      setTimeout(() => {
+        loadingBar.style.width = '80%';
+      }, 50);
+    }
+
+    function hideLoading() {
+      loadingBar.style.width = '100%';
+      setTimeout(() => {
+        loadingBar.style.opacity = '0';
+        setTimeout(() => {
+          loadingBar.style.width = '0%';
+        }, 300);
+      }, 300);
+    }
+
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('http') && !href.startsWith('https')) {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          showLoading();
+          setTimeout(() => {
+            window.location.href = href;
+          }, 600);
+        });
+      }
+    });
+
+    window.addEventListener('load', () => {
+      hideLoading();
+    });
+
+    const tabs = document.querySelectorAll('.tab');
+    const categories = document.querySelectorAll('.project-category');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        categories.forEach(cat => cat.classList.remove('active'));
+        tab.classList.add('active');
+        const targetId = tab.getAttribute('data-target');
+        document.getElementById(targetId)?.classList.add('active');
+      });
+    });
+  })();
+</script>

@@ -1,0 +1,86 @@
+---
+layout: layout.njk
+title: Contact
+---
+
+<main class="contact-grid container" aria-labelledby="contact-title">
+  <section class="sidebar mb-4">
+    <h2>Let’s Connect!</h2>
+    <p>
+      I truly believe great things happen when people come together. Whether you want to discuss a new project, explore collaboration opportunities, or simply have a chat about technology and creativity, I’m all ears.
+    </p>
+    <p>
+      Your ideas, questions, or feedback are important to me. I’m committed to providing timely and thoughtful responses because building meaningful connections is what drives my passion.
+    </p>
+    <p>
+      No matter the scale of your inquiry, from a quick question to a detailed proposal, I’m excited to hear from you. Let’s make something awesome happen!
+    </p>
+    <ul>
+      <li>Reach out anytime, I’m here to help</li>
+      <li>Open to freelance, consulting, and collaboration</li>
+      <li>Working globally with clients and teams</li>
+      <li>Passionate about problem-solving and innovation</li>
+    </ul>
+  </section>
+
+  <section class="form-section">
+    <h2 id="contact-title">Contact Me</h2>
+    <form
+      method="POST"
+      action="https://formspree.io/f/xrbqnrar"
+      aria-label="Contact form"
+    >
+      <input type="hidden" name="_redirect" value="/Contact/ThankYou" />
+
+      <div class="mb-3">
+        <label for="FirstName" class="form-label">First Name</label>
+        <input
+          type="text"
+          id="FirstName"
+          name="FirstName"
+          class="form-control"
+          placeholder="Your first name"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="LastName" class="form-label">Last Name</label>
+        <input
+          type="text"
+          id="LastName"
+          name="LastName"
+          class="form-control"
+          placeholder="Your last name"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input
+          type="email"
+          id="Email"
+          name="Email"
+          class="form-control"
+          placeholder="you@example.com"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="Message" class="form-label">Message</label>
+        <textarea
+          id="Message"
+          name="Message"
+          class="form-control"
+          rows="5"
+          placeholder="Your message..."
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </section>
+</main>

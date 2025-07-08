@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title }} - Maya Guragain</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Banner -->
+  <div class="top-banner2 text-white text-center py-2">
+    <strong>Open to new opportunities & collaborations — Let's build something great!</strong>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark" role="navigation" aria-label="Main navigation">
+    <div class="container-fluid d-flex align-items-center">
+      <!-- Brand -->
+      <a class="navbar-brand" href="/" tabindex="0" aria-label="Go to Home page" style="padding-left: 0.5rem;">
+        Maya Guragain
+      </a>
+
+      <!-- Vertical Divider -->
+      <div style="border-left: 2px solid #ffffff33; height: 40px; margin-right: 0.5rem;"></div>
+
+      <!-- Hamburger toggler -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars fa-lg text-light"></i>
+      </button>
+
+      <!-- Nav links -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-1">
+          <li class="nav-item">
+            <a class="nav-link {% if title == 'Home' %}active{% endif %}" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link {% if title == 'About Me' %}active{% endif %}" href="/about/">About Me</a></li>
+          <li class="nav-item"><a class="nav-link {% if title == 'Projects' %}active{% endif %}" href="/projects/">Projects</a></li>
+          <li class="nav-item"><a class="nav-link {% if title == 'Contact' %}active{% endif %}" href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page specific content -->
+  <main class="container my-5">
+    {{ content | safe }}
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-auto bg-dark text-light py-4">
+    <div class="container text-center">
+      <div class="row">
+        <!-- Philosophy -->
+        <div class="col-md-4">
+          <h5>Philosophy</h5>
+          <hr>
+          <p class="text-start fst-italic" style="color: #c4d0ff;">
+            “Driven by curiosity and passion, I build elegant solutions that blend creativity with clean, efficient code. Every project is a chance to learn, improve, and connect ideas to impact.”
+          </p>
+        </div>
+        
+        <!-- Contact -->
+        <div class="col-md-4">
+          <h5>Contact</h5>
+          <hr>
+          <ul class="list-unstyled links text-start">
+            <li><a href="mailto:maya.guragain@example.com" class="text-light"><i class="fas fa-envelope"></i> mayaguragain.mg@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/mayaguragain" target="_blank" class="text-light"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <!-- Links -->
+        <div class="col-md-4">
+          <h5>Explore</h5>
+          <hr>
+          <ul class="list-unstyled links text-start">
+            <li><a href="/projects/" class="text-light"><i class="fas fa-code"></i> Projects</a></li>
+            <li><a href="/about/" class="text-light"><i class="fas fa-user"></i> About Me</a></li>
+            <li><a href="/contact/" class="text-light"><i class="fas fa-paper-plane"></i> Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="mb-0">
+        <p class="mb-0">&copy; 2025 Maya Guragain. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Loading Bar -->
+  <div id="loading-bar" style="
+        position: fixed;
+        top: 0; left: 0; height: 4px;
+        background: linear-gradient(90deg, #4f63e1, #a6b1ff);
+        width: 0%;
+        z-index: 1100;
+        transition: width 0.4s ease;
+      ">
+  </div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    (() => {
+      const loadingBar = document.getElementById('loading-bar');
+
+      function showLoading() {
+        loadingBar.style.width = '0%';
+        loadingBar.style.opacity = '1';
+
+        setTimeout(() => {
+          loadingBar.style.width = '80%';
+        }, 50);
+      }
+
+      function hideLoading() {
+        loadingBar.style.width = '100%';
+
+        setTimeout(() => {
+          loadingBar.style.opacity = '0';
+
+          setTimeout(() => {
+            loadingBar.style.width = '0%';
+          }, 300);
+        }, 300);
+      }
+
+      document.querySelectorAll('a[href]').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('http')) {
+          link.addEventListener('click', e => {
+            e.preventDefault();
+            showLoading();
+            setTimeout(() => {
+              window.location.href = href;
+            }, 600);
+          });
+        }
+      });
+
+      window.addEventListener('load', () => {
+        hideLoading();
+      });
+    })();
+  </script>
+
+</body>
+</html>
