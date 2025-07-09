@@ -7,7 +7,7 @@ Welcome to my personal developer portfolio! This site showcases my background, s
 
 ## 🧠 About Me
 
-Hi, I’m Maya — a passionate CS student focused on building meaningful digital experiences. My interests range from full-stack web development to artificial intelligence and user-centered design. This portfolio is a hub for my featured work, contact info, and tech journey.
+Hi, I’m Maya, a passionate CS student focused on building meaningful digital experiences. My interests range from full-stack web development to artificial intelligence and user-centered design. This portfolio is a hub for my featured work, contact info, and tech journey.
 
 ## 🚀 Features
 
