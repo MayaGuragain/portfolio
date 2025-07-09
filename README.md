@@ -22,3 +22,17 @@ Hi, I’m Maya, a passionate CS student focused on building meaningful digital e
 - **Frontend:** HTML5, CSS3, Bootstrap, JavaScript
 - **Tools:** VS Code, Git & GitHub, Netlify
 - **Other:** Eleventy (static site generator), responsive design principles
+
+## 📬 Contact
+
+- **Email:** [mayaguragain.mg@gmail.com](mailto:mayaguragain.mg@gmail.com)
+- **LinkedIn:** [linkedin.com/in/maya-guragain](https://linkedin.com/in/maya-guragain)
+- **GitHub:** [@MayaGuragain](https://github.com/MayaGuragain)
+
+## ✅ Status
+
+🟢 Currently live and being updated with new projects and improvements.
+
+---
+
+Thank you for checking out my portfolio!
