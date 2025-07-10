@@ -726,7 +726,7 @@ html {
   border: 1px solid #313c66;
 }
 .form-control {
-  background-color: transparent !important; /* transparent background */
+  background-color: #16192a  !important; /* transparent background */
   color: #eee !important; /* light text */
   border: 1px solid #4f63e1; /* optional: light border */
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -752,9 +752,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
-  box-shadow: 0 0 0 1000px transparent inset !important;
-  -webkit-text-fill-color: #eee !important; 
-  background-color: transparent !important;
-  transition: background-color 5000s ease-in-out 0s !important; 
+  -webkit-box-shadow: 0 0 0 1000px #16192a inset !important;
+  box-shadow: 0 0 0 1000px #16192a inset !important;
+  -webkit-text-fill-color: #eee !important;
 }
