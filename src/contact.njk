@@ -101,3 +101,19 @@ title: Contact
 <script>
   document.getElementById('formLoadedAt').value = Date.now();
 </script>
+
+<script>
+  // Autofill visual fix: make fields look like "dirty" inputs
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      document.querySelectorAll('input, textarea').forEach(input => {
+        if (input.value) {
+          const value = input.value;
+          input.value = '';     // clear
+          input.value = value;  // reassign to trigger style reset
+        }
+      });
+    }, 100);
+  });
+</script>
+
