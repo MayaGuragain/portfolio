@@ -30,8 +30,12 @@ title: Contact
       action="https://formspree.io/f/xrbqnrar"
       aria-label="Contact form"
     >
+      <!-- Redirect and Anti-Spam Fields -->
       <input type="hidden" name="_redirect" value="/Contact/ThankYou" />
       <input type="text" name="_gotcha" style="display: none;" tabindex="-1" autocomplete="off" />
+      <input type="hidden" id="formLoadedAt" name="formLoadedAt" />
+
+      <!-- First Name -->
       <div class="mb-3">
         <label for="FirstName" class="form-label">First Name</label>
         <input
@@ -44,6 +48,7 @@ title: Contact
         />
       </div>
 
+      <!-- Last Name -->
       <div class="mb-3">
         <label for="LastName" class="form-label">Last Name</label>
         <input
@@ -56,6 +61,7 @@ title: Contact
         />
       </div>
 
+      <!-- Email -->
       <div class="mb-3">
         <label for="Email" class="form-label">Email</label>
         <input
@@ -68,6 +74,7 @@ title: Contact
         />
       </div>
 
+      <!-- Message -->
       <div class="mb-3">
         <label for="Message" class="form-label">Message</label>
         <textarea
@@ -80,7 +87,17 @@ title: Contact
         ></textarea>
       </div>
 
+      <!-- Google reCAPTCHA -->
+      <div class="g-recaptcha mb-3" data-sitekey="YOUR_SITE_KEY"></div>
+
+      <!-- Submit -->
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </section>
 </main>
+
+<!-- reCAPTCHA and Timestamp Script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  document.getElementById('formLoadedAt').value = Date.now();
+</script>
