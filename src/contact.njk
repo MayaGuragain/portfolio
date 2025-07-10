@@ -29,6 +29,7 @@ title: Contact
       method="POST"
       action="https://formspree.io/f/xrbqnrar"
       aria-label="Contact form"
+      autocomplete="off"
     >
       <!-- Redirect and Anti-Spam Fields -->
       <input type="hidden" name="_redirect" value="/Contact/ThankYou" />
@@ -44,6 +45,7 @@ title: Contact
           name="FirstName"
           class="form-control"
           placeholder="Your first name"
+          autocomplete="off"
           required
         />
       </div>
@@ -102,18 +104,4 @@ title: Contact
   document.getElementById('formLoadedAt').value = Date.now();
 </script>
 
-<script>
-  // Autofill visual fix: make fields look like "dirty" inputs
-  window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-      document.querySelectorAll('input, textarea').forEach(input => {
-        if (input.value) {
-          const value = input.value;
-          input.value = '';     // clear
-          input.value = value;  // reassign to trigger style reset
-        }
-      });
-    }, 100);
-  });
-</script>
 
