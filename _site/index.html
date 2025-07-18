@@ -19,18 +19,24 @@
 </head>
 <body>
 
-  <!-- Top Banner -->
-  <div class="top-banner2 text-white text-center py-2">
-    <strong>Open to new opportunities & collaborations — Let's build something great!</strong>
+ <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark flex-column p-0">
+
+  <!-- Banner on top with exact same styles as .top-banner2 -->
+  <div class="w-100 text-center" style="
+    background: linear-gradient(180deg, #435bc7, #89a5ff);
+    color: white;
+    padding: 0.25rem 0;
+    font-weight: 600;
+    font-size: .80rem;
+  ">
+    Open to new opportunities & collaborations — Let's build something great!
   </div>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top" role="navigation" aria-label="Main navigation">
-    <div class="container-fluid d-flex align-items-center">
-      <!-- Brand -->
-      <a class="navbar-brand" href="/" tabindex="0" aria-label="Go to Home page" style="padding-left: 0.5rem;">
-        Maya Guragain
-      </a>
+  <!-- Actual navbar -->
+  <div class="container-fluid d-flex align-items-center">
+    <a class="navbar-brand" href="/" tabindex="0" aria-label="Go to Home page" style="padding-left: 0.5rem;">
+      Maya Guragain
+    </a>
 
       <!-- Vertical Divider -->
       <div style="border-left: 2px solid #ffffff33; height: 40px; margin-right: 0.5rem;"></div>
@@ -54,9 +60,13 @@
     </div>
   </nav>
 
-  <!-- Page specific content -->
-  <main class="container my-5">
-    
+  </nav>
+
+<!-- Spacer for fixed nav -->
+<div style="height: 50px;"></div>
+
+<main class="container my-5">
+  
 <main class="container my-5">
 
   <!-- Hero Section -->
@@ -170,7 +180,8 @@
   type();
 </script>
 
-  </main>
+</main>
+
 
   <!-- Footer -->
   <footer class="mt-auto bg-dark text-light py-4">

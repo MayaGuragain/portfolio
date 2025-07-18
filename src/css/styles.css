@@ -46,7 +46,7 @@ a:hover {
   background-color: #000 !important;
   padding-top: 0.35rem;
   padding-bottom: 0.35rem;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   border-bottom: 2px solid #4f8cff; 
 }
 
@@ -756,3 +756,4 @@ textarea:-webkit-autofill {
   transition: background-color 0s;
   border-radius: 10px;
 }
+
