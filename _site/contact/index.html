@@ -25,7 +25,7 @@
   </div>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark" role="navigation" aria-label="Main navigation">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top" role="navigation" aria-label="Main navigation">
     <div class="container-fluid d-flex align-items-center">
       <!-- Brand -->
       <a class="navbar-brand" href="/" tabindex="0" aria-label="Go to Home page" style="padding-left: 0.5rem;">
@@ -83,9 +83,14 @@
       method="POST"
       action="https://formspree.io/f/xrbqnrar"
       aria-label="Contact form"
+      autocomplete="off"
     >
+      <!-- Redirect and Anti-Spam Fields -->
       <input type="hidden" name="_redirect" value="/Contact/ThankYou" />
+      <input type="text" name="_gotcha" style="display: none;" tabindex="-1" autocomplete="off" />
+      <input type="hidden" id="formLoadedAt" name="formLoadedAt" />
 
+      <!-- First Name -->
       <div class="mb-3">
         <label for="FirstName" class="form-label">First Name</label>
         <input
@@ -94,10 +99,12 @@
           name="FirstName"
           class="form-control"
           placeholder="Your first name"
+          autocomplete="off"
           required
         />
       </div>
 
+      <!-- Last Name -->
       <div class="mb-3">
         <label for="LastName" class="form-label">Last Name</label>
         <input
@@ -106,10 +113,12 @@
           name="LastName"
           class="form-control"
           placeholder="Your last name"
+          autocomplete="off"
           required
         />
       </div>
 
+      <!-- Email -->
       <div class="mb-3">
         <label for="Email" class="form-label">Email</label>
         <input
@@ -118,10 +127,12 @@
           name="Email"
           class="form-control"
           placeholder="you@example.com"
+          autocomplete="off"
           required
         />
       </div>
 
+      <!-- Message -->
       <div class="mb-3">
         <label for="Message" class="form-label">Message</label>
         <textarea
@@ -130,14 +141,27 @@
           class="form-control"
           rows="5"
           placeholder="Your message..."
+          autocomplete="off"
           required
         ></textarea>
       </div>
 
+      <!-- Google reCAPTCHA -->
+      <div class="g-recaptcha mb-3" data-sitekey="6Ld0xX4rAAAAAG84XgMfBo-0DEde9PLSeapCu6_f"></div>
+
+      <!-- Submit -->
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </section>
 </main>
+
+<!-- reCAPTCHA and Timestamp Script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  document.getElementById('formLoadedAt').value = Date.now();
+</script>
+
+
 
   </main>
 
@@ -159,8 +183,8 @@
           <h5>Contact</h5>
           <hr>
           <ul class="list-unstyled links text-start">
-            <li><a href="mailto:maya.guragain@example.com" class="text-light"><i class="fas fa-envelope"></i> mayaguragain.mg@gmail.com</a></li>
-            <li><a href="https://www.linkedin.com/in/mayaguragain" target="_blank" class="text-light"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+            <li><a href="mailto:mayaguragain.mg@gmail.com" class="text-light"><i class="fas fa-envelope"></i> mayaguragain.mg@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/maya-guragain" target="_blank" class="text-light"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
           </ul>
         </div>
 
