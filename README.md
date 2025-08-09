@@ -31,7 +31,7 @@ Hello, I’m Maya, a passionate CS student focused on building meaningful digita
 
 ## ✅ Status
 
-🟢 Currently live and being updated with new projects and improvements.
+🟢 Currently live and being updated with new projects and improvements constantly.
 
 ---
 
