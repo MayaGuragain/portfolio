@@ -1,4 +1,4 @@
-# 🌐 Maya Guragain — Developer Portfolio
+# 🌐 Maya Guragain - Developer Portfolio
 
 Welcome to my personal developer portfolio! This site showcases my background, skills, and projects as I pursue a degree in Computer Science and explore opportunities in tech.
 
